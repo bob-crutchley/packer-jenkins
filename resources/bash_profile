@@ -19,5 +19,5 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 # user defined variables
-export JENKINS_HOME="/home/jenkins"
+export JENKINS_HOME="/home/jenkins/jenkins_home"
 

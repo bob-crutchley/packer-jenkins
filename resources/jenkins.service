@@ -1,0 +1,11 @@
+[Unit]
+Description=Jenkins
+
+[Service]
+User=jenkins
+WorkingDirectory=/home/jenkins/jenkins_home
+ExecStart=/usr/bin/java -jar /home/jenkins/jenkins_home
+
+[Install]
+WantedBy=multi-user.target
+
