@@ -22,6 +22,11 @@
 			"destination": "/home/jenkins/jenkins.service"
 		},
 		{
+			"type": "file",
+			"source": "resources/run.bash",
+			"destination": "/home/jenkins/run.bash"
+		},
+		{
 			"type": "shell",
 			"script": "resources/jenkins_install.bash"
 		}

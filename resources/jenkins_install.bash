@@ -5,7 +5,5 @@ packages="java wget"
 sudo yum install -y ${packages}
 mkdir -p ${JENKINS_HOME}
 wget ${latest_war} ${JENKINS_HOME}
-# systemd service
 sudo cp ~/jenkins.service /etc/systemd/system/jenkins.service
-sudo systemctl enable jenkins
 
