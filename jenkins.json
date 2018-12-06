@@ -1,0 +1,25 @@
+{
+    "builders": [
+		{
+			"image_name": "jenkins",
+			"type": "googlecompute",
+            "account_file": "{{user `account_file`}}",
+			"project_id": "{{user  `project_id`}}",
+			"source_image_family": "centos-7",
+			"ssh_username": "jenkins",
+			"zone": "europe-west2-c"
+        }
+	],
+	"provisioners": [
+		{
+			"type": "file",
+			"source": "./bash_profile",
+			"destination": "/home/jenkins/.bash_profile"
+		},
+		{
+			"type": "shell",
+			"script": "jenkins_install.bash"
+		}
+	]
+}
+
